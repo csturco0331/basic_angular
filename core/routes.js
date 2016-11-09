@@ -6,11 +6,12 @@ angular.module('app').
       	when('/home', {
 
           template: `
-            <div class="pageWidth pageHeight outerContainer red">
-              <div class="centerBox translucentGrey">
+            <div class='pageWidth pageHeight outerContainer red'>
+              <div class='centerBox translucentGrey'>
               <label>Enter your name</label><br/>
                 <input ng-model='homeCtrl.userService.name' type='text'></input><br/>
-                <a ng-href="#welcome">Enter the Website, {{homeCtrl.userService.name}}!</a>
+                <a ng-href='#welcome'>Enter the Website, {{homeCtrl.userService.name}}!</a></br>
+                <input type='button' ng-click='homeCtrl.userService.clear()' value='Clear'></input>
               </div>
             </div>
           `,
@@ -21,7 +22,7 @@ angular.module('app').
       	when('/welcome', {
 
           template: `
-            <div class="pageWidth pageHeight">
+            <div class='pageWidth pageHeight'>
               <label> Welcome to AngularJS, {{dashboardCtrl.userService.name}}!</label>
             </div>
           `,
