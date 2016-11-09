@@ -1,6 +1,27 @@
+.fullView {
+  padding: 0;
+  margin: 0;
+}
+
 .outerContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreboard {
+  flex: 1;
+}
+
+.scoreButton {
+  display: flex;
+  flex: 5;
   justify-content: center;
 }
 
@@ -13,7 +34,18 @@
 }
 
 .centerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px;
+  border-color: black;
+  border-style: solid;
   width: 25%;
+  height: 25%;
+}
+
+.circle {
+  border-radius: 100%;
 }
 
 .red {
@@ -22,4 +54,12 @@
 
 .translucentGrey {
   background-color: rgba(150, 150, 150, 0.5);
+}
+
+.button {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }

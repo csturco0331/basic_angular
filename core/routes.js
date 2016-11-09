@@ -7,11 +7,12 @@ angular.module('app').
 
           template: `
             <div class="pageWidth pageHeight outerContainer red">
-              <div class="centerBox translucentGrey">
-              <label>Enter your name</label><br/>
-                <input ng-model='homeCtrl.userService.name' type='text'></input><br/>
-                <a ng-href="#welcome">Enter the Website, {{homeCtrl.userService.name}}!</a>
-              </div>
+              <a ng-href="#welcome" class="centerBox translucentGrey" ng-click="homeCtrl.userService.resetScore()">
+                New
+              </a>
+              <a ng-href="#welcome" class="centerBox translucentGrey" ng-show="homeCtrl.userService.hasScore()">
+                Continue
+              </a>
             </div>
           `,
           controller: 'HomeController',
@@ -21,8 +22,11 @@ angular.module('app').
       	when('/welcome', {
 
           template: `
-            <div class="pageWidth pageHeight">
-              <label> Welcome to AngularJS, {{dashboardCtrl.userService.name}}!</label>
+            <div class="pageWidth pageHeight container red">
+              <label class="scoreboard"> Current Score: {{dashboardCtrl.userService.score}}!</label>
+              <div class="scoreButton">
+                <div ng-click="dashboardCtrl.userService.incScore()" class="centerBox translucentGrey circle">+1</div>
+              </div>
             </div>
           `,
           controller: 'DashboardController',
