@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Basic Angular Example</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <link href="core/css/coreStyle.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+
+    <script src="core/app.js"></script>
+
+    <script src="core/service/UserService.js"></script>
+
+    <script src="home/HomeController.js"></script>
+    <script src="dashboard/DashboardController.js"></script>
+
+    <script src="core/routes.js"></script>
+
+</head>
+<body>
+	<ng-view></ng-view>
+</body>
+</html>
